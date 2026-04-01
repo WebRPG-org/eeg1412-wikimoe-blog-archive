@@ -130,8 +130,8 @@
         target: 'ol-map',
         layers: [worldLayer, markerLayer, labelLayer],
         overlays: [overlay],
-        interactions: ol.interaction.defaults({ altShiftDragRotate: false, pinchRotate: false }),
-        controls: ol.control.defaults({ zoom: false }).extend([
+        interactions: ol.interaction.defaults.defaults({ altShiftDragRotate: false, pinchRotate: false }),
+        controls: ol.control.defaults.defaults({ zoom: false }).extend([
           new ol.control.Zoom({ zoomInTipLabel: '放大', zoomOutTipLabel: '缩小' })
         ]),
         view: new ol.View({

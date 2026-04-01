@@ -1140,20 +1140,21 @@ main {
   align-items: center;
   gap: 3px;
   font-size: 0.8125rem;
-  color: #d85f85;
+  color: var(--primary);
   transition: color 0.2s;
 }
 
 .mappoint-tag-item .icon-map-pin {
-  color: #d85f85;
+  color: var(--primary);
 }
 
 .mappoint-tag-item:hover {
-  color: #c04870;
+  color: var(--primary-dark);
+  text-decoration: underline;
 }
 
 .mappoint-tag-item:hover .icon-map-pin {
-  color: #c04870;
+  color: var(--primary-dark);
 }
 
 /* page-title 中的 map-pin 图标 */
