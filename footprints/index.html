@@ -143,7 +143,7 @@
       });
 
       // 加载世界地图
-      fetch(siteUrl + '/openlayers/geojson/world-low.json')
+      fetch(siteUrl + '/openlayers/geojson/world-mid.json')
         .then(function(r) { return r.json(); })
         .then(function(geojson) {
           var features = new ol.format.GeoJSON().readFeatures(geojson, { featureProjection: 'EPSG:3857' });
