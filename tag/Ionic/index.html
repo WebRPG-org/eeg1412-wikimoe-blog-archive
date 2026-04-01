@@ -47,30 +47,38 @@
       <h1 class="page-title">标签：#Ionic<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/260/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/260/">解决Ionic Vue生命周期钩子无法调用的问题</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/260/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2021-05-23T09:03:02.000Z">2021-05-23 18:03</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/JavaScript_jQuery/">JavaScript</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/260/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202105/0cfb1621760550.jpg" alt="未标题-2.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">在Ionic中，Vue的生命周期是被接管的。 因为Ionic对页面进行了缓存，所以每次页面只有第一次加载时才会触发Vue的生命周期，所以为了防止出现奇怪的问题，往往会用Ionic的生命周期，但是Ionic的生命周期问题也不少。 在Ionic中，有如下的生命周期 名称 描述 ionViewWillEnter 页面进入时触发 ionViewDidEnter 页面进入动画结束后触发 ionViewWil</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Ionic/">#Ionic</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/260/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202105/0cfb1621760550.jpg" alt="未标题-2.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">解决Ionic Vue生命周期钩子无法调用的问题</div>
+      </a>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/259/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/259/">解决Ionic在iOS中无法长按保存图片的问题</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/259/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2021-05-23T08:52:59.000Z">2021-05-23 17:52</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/JavaScript_jQuery/">JavaScript</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/259/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202105/0cfb1621760550.jpg" alt="未标题-2.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">先说答案： 在需要长按保存的图片中增加一段样式 -webkit-touch-callout: default !important; 原理： 这是一段苹果Safari专用的样式，用途就是禁止图片的长按保存。估计Ionic的UI策略本来是也想禁止掉安卓的长按保存，但是安卓似乎没有对应的方案，就唯独给苹果设置上了...因为自己用的是安卓的手机，项目是明确要求长按保存的，结果一直没有发现这个问题，属实坑</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Ionic/">#Ionic</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/259/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202105/0cfb1621760550.jpg" alt="未标题-2.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">解决Ionic在iOS中无法长按保存图片的问题</div>
+      </a>
     </article>
       </div>
     </div>
@@ -80,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

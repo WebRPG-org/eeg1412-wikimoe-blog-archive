@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#爱上火车<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t16dgqmz/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/t16dgqmz/">《爱上火车》与《铁路浪漫谭》的圣地巡礼之人吉</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t16dgqmz/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-08-19T01:00:00.000Z">2025-08-19 10:00</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/t16dgqmz/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202508/68a3cd234854a7788318c9a9.webp" alt="新規プロジェクト (2)" loading="lazy" width="1280" height="720"></a></div>
       <p class="post-excerpt">2025年8月11日～13日，今天要去位于日本熊本县的人吉市进行《爱上火车》与《铁路浪漫谭》的圣地巡礼。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E7%88%B1%E4%B8%8A%E7%81%AB%E8%BD%A6/">#爱上火车</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E9%93%81%E8%B7%AF%E6%B5%AA%E6%BC%AB%E8%B0%AD/">#铁路浪漫谭</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/360%C2%B0%E5%85%A8%E6%99%AF%E7%85%A7%E7%89%87/">#360°全景照片</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bada11cbfca77fbc867b55/">人吉市</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/t16dgqmz/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202508/68a3cd234854a7788318c9a9.webp" alt="新規プロジェクト (2)" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="blog-card-title">《爱上火车》与《铁路浪漫谭》的圣地巡礼之人吉</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/d8ltishi/">
@@ -84,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#windows7<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/134/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/134/">通过清除图标缓存文件解决 Windows7 桌面图标错乱或者不显示</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/134/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2018-04-19T01:32:23.000Z">2018-04-19 10:32</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/othertechnology/">其他技术</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/134/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201804/ad7f1523364419.jpg" alt="0000.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">公司的Win7经常桌面图标错乱或者不显示，在网上搜了很多中文资料感觉都不靠谱，最后搜了英文资料后感觉这是最靠谱也是最安全的办法。 1.进入文件夹：C:\Users\用户名\AppData\Local 2.找到IconCache.db文件右键删除 3.Ctrl+Alt+Del启动任务管理器 4.进入进程面板，找到explorer.exe将其结束进程 5.点击任务管理器右上角【文件】→【新建任务（运行</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/windows7/">#windows7</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/134/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201804/ad7f1523364419.jpg" alt="0000.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">通过清除图标缓存文件解决 Windows7 桌面图标错乱或者不显示</div>
+      </a>
     </article>
       </div>
     </div>
@@ -67,7 +71,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

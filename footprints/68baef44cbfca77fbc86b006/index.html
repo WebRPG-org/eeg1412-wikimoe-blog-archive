@@ -47,17 +47,21 @@
       <h1 class="page-title">御岳溪谷<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/2kew0zlg/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/2kew0zlg/">欣赏2024年东京的枫叶——御岳溪谷红叶游记</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/2kew0zlg/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-11-24T05:40:23.000Z">2024-11-24 14:40</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/travel/">日常旅游</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/2kew0zlg/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202411/thum-6742a73c22d68cf15f219f44.webp" alt="20241123_143349" loading="lazy" width="1280" height="721"></a></div>
       <p class="post-excerpt">2024年11月23日，天气晴，又到了每年东京赏枫叶的时候了，今年去位于东京郊区青梅市的御岳溪谷欣赏枫叶。</p>
       <div class="tag-list"><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baef44cbfca77fbc86b006/">御岳溪谷</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/2kew0zlg/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202411/thum-6742a73c22d68cf15f219f44.webp" alt="20241123_143349" loading="lazy" width="1280" height="721">
+        </div>
+        <div class="blog-card-title">欣赏2024年东京的枫叶——御岳溪谷红叶游记</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -70,7 +74,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

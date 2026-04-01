@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#游戏人生<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/ne15mtau/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/ne15mtau/">秋叶原游记</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/ne15mtau/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-04-20T14:19:38.000Z">2024-04-20 23:19</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab55/">周边购物游记</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/ne15mtau/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202404/6623cee9d1f65cd1a8859859.webp" alt="image-81ixuxhb" loading="lazy" width="1200" height="630"></a></div>
       <p class="post-excerpt">因为和另外一波好友约好了在秋叶原涮火锅，所以在结束了《孤独摇滚》展后就去秋叶原逛了逛。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E9%9B%80%E9%AD%82%E9%BA%BB%E5%B0%86/">#雀魂麻将</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">#游戏人生</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E4%BA%94%E7%AD%89%E5%88%86%E7%9A%84%E8%8A%B1%E5%AB%81/">#五等分的花嫁</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E6%88%91%E6%8E%A8%E7%9A%84%E5%AD%A9%E5%AD%90/">#我推的孩子</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bad860cbfca77fbc86796d/">秋叶原</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/ne15mtau/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202404/6623cee9d1f65cd1a8859859.webp" alt="image-81ixuxhb" loading="lazy" width="1200" height="630">
+        </div>
+        <div class="blog-card-title">秋叶原游记</div>
+      </a>
     </article>
       </div>
     </div>
@@ -67,7 +71,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

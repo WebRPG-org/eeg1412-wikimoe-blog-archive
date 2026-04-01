@@ -47,17 +47,21 @@
       <h1 class="page-title">日野町<small>(3 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/tcaqygd2/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/tcaqygd2/">探访日本的废校：《中二病也要谈恋爱！》圣地巡礼之杜鹃花学校（原镰挂小学）</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/tcaqygd2/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2026-03-22T23:13:52.906Z">2026-03-23 08:13</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/tcaqygd2/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202603/69bfc6e2a9f8080e087b73f9.webp" alt="cover" loading="lazy" width="1280" height="720"></a></div>
       <p class="post-excerpt">2026年3月21日，今天去位于日本滋贺县蒲生郡日野町的杜鹃花学校（原镰挂小学）。这里是动画《中二病也要谈恋爱！》的学校原型。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E4%B8%AD%E4%BA%8C%E7%97%85%E4%B9%9F%E8%A6%81%E8%B0%88%E6%81%8B%E7%88%B1/">#中二病也要谈恋爱</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/360%C2%B0%E5%85%A8%E6%99%AF%E7%85%A7%E7%89%87/">#360°全景照片</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/69bb6981a9f8080e0878e644/">日野町</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/tcaqygd2/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202603/69bfc6e2a9f8080e087b73f9.webp" alt="cover" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="blog-card-title">探访日本的废校：《中二病也要谈恋爱！》圣地巡礼之杜鹃花学校（原镰挂小学）</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/tc8ccwz9/">
@@ -104,7 +108,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

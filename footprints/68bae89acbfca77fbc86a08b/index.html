@@ -64,17 +64,21 @@
       </div>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/stktx0kc/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/stktx0kc/">探访原作中被大海淹没的城市：动画《亚托莉 -我挚爱的时光-》圣地巡礼之铫子</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/stktx0kc/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-03-25T00:02:18.000Z">2025-03-25 09:02</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/stktx0kc/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202503/67e001388898c66dccd964ad.webp" alt="新規プロジェクト (1)" loading="lazy" width="1280" height="720"></a></div>
       <p class="post-excerpt">2025年3月23日，天气晴，今天去动画《亚托莉 -我挚爱的时光-》的圣地——铫子。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E4%BA%9A%E6%89%98%E8%8E%89/">#亚托莉</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bae89acbfca77fbc86a08b/">铫子市</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/stktx0kc/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202503/67e001388898c66dccd964ad.webp" alt="新規プロジェクト (1)" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="blog-card-title">探访原作中被大海淹没的城市：动画《亚托莉 -我挚爱的时光-》圣地巡礼之铫子</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/stmpr1ku/">
@@ -104,7 +108,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

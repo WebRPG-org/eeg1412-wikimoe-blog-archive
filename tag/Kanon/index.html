@@ -64,30 +64,38 @@
       </div>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/iq61g1do/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/iq61g1do/">Key社旗下多款作品的联动咖啡——Key25th Anniversary Party in cafe＆bar MENU</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/iq61g1do/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-02-24T10:25:07.000Z">2025-02-24 19:25</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab57/">联动</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/iq61g1do/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202502/67bc57a35831d26183ff6b3d.webp" alt="cover" loading="lazy" width="1280" height="720"></a></div>
       <p class="post-excerpt">2025年2月23日，天气晴，今天去秋叶原的cafe＆bar MENU吃Key社的联动咖啡——Key25th Anniversary Party in cafe＆bar MENU。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Kanon/">#Kanon</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%81%94%E5%8A%A8%E5%92%96%E5%95%A1/">#联动咖啡</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bad860cbfca77fbc86796d/">秋叶原</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/iq61g1do/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202502/67bc57a35831d26183ff6b3d.webp" alt="cover" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="blog-card-title">Key社旗下多款作品的联动咖啡——Key25th Anniversary Party in cafe＆bar MENU</div>
+      </a>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/rnqn87d6/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/rnqn87d6/">品尝秋子阿姨的神秘果酱《Kanon》25周年联动咖啡</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/rnqn87d6/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-06-08T12:35:51.000Z">2024-06-08 21:35</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab57/">联动</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/rnqn87d6/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/66643ae177d182e92b5b4f2c.webp" alt="20330_1_d2" loading="lazy" width="1200" height="675"></a></div>
       <p class="post-excerpt">在看完《我推的孩子》电影之后，去隔壁吃《Kanon》的联动咖啡。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Kanon/">#Kanon</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%81%94%E5%8A%A8%E5%92%96%E5%95%A1/">#联动咖啡</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bad8b6cbfca77fbc8679d6/">新宿</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/rnqn87d6/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/66643ae177d182e92b5b4f2c.webp" alt="20330_1_d2" loading="lazy" width="1200" height="675">
+        </div>
+        <div class="blog-card-title">品尝秋子阿姨的神秘果酱《Kanon》25周年联动咖啡</div>
+      </a>
     </article>
       </div>
     </div>
@@ -97,7 +105,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

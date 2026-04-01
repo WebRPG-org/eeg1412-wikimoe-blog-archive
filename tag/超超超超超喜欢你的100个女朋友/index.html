@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#超超超超超喜欢你的100个女朋友<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/vqfs5tpj/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/vqfs5tpj/">翘班只为看《超超超超超喜欢你的100个女朋友》展 Love for Family</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/vqfs5tpj/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-06-12T11:10:22.000Z">2024-06-12 20:10</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab56/">展会</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/vqfs5tpj/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/6669797a0f022da1a81b7a2d.webp" alt="image-mv1m5jh8" loading="lazy" width="1000" height="500"></a></div>
       <p class="post-excerpt">2024年6月12日，天气多云，今天翘班去涩谷逛《超超超超超喜欢你的100个女朋友》展 Love for Family！</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%B6%85%E8%B6%85%E8%B6%85%E8%B6%85%E8%B6%85%E5%96%9C%E6%AC%A2%E4%BD%A0%E7%9A%84100%E4%B8%AA%E5%A5%B3%E6%9C%8B%E5%8F%8B/">#超超超超超喜欢你的100个女朋友</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baf36ccbfca77fbc86b957/">涩谷</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/vqfs5tpj/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/6669797a0f022da1a81b7a2d.webp" alt="image-mv1m5jh8" loading="lazy" width="1000" height="500">
+        </div>
+        <div class="blog-card-title">翘班只为看《超超超超超喜欢你的100个女朋友》展 Love for Family</div>
+      </a>
     </article>
       </div>
     </div>
@@ -67,7 +71,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

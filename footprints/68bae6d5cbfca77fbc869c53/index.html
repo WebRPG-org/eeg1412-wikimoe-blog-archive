@@ -64,30 +64,38 @@
       </div>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/suolet48/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/suolet48/">真相永远只有一个！《名侦探柯南》特别音乐会2025</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/suolet48/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-04-14T00:01:31.000Z">2025-04-14 09:01</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab58/">音乐会</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/suolet48/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202504/67fbb8dbd088dcf864010d26.webp" alt="image (12)" loading="lazy" width="1280" height="670"></a></div>
       <p class="post-excerpt">2025年4月13日，天气小雨，今天去国立代代木竞技场听《名侦探柯南》特别音乐会2025。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E5%90%8D%E4%BE%A6%E6%8E%A2%E6%9F%AF%E5%8D%97/">#名侦探柯南</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E4%BA%A4%E5%93%8D%E9%9F%B3%E4%B9%90%E4%BC%9A/">#交响音乐会</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bae6d5cbfca77fbc869c53/">原宿</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/suolet48/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202504/67fbb8dbd088dcf864010d26.webp" alt="image (12)" loading="lazy" width="1280" height="670">
+        </div>
+        <div class="blog-card-title">真相永远只有一个！《名侦探柯南》特别音乐会2025</div>
+      </a>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/g0xaa2j6/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/g0xaa2j6/">走访繁荣商业区的边边角角《Lovelive！SuperStar!!》圣地巡礼之原宿表参道</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/g0xaa2j6/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-06-13T00:48:12.000Z">2024-06-13 09:48</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/g0xaa2j6/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/66698baf0f022da1a81b8a6b.webp" alt="image-8qmsf0fy" loading="lazy" width="1000" height="477"></a></div>
       <p class="post-excerpt">2024年6月12日，天气多云，在逛完《超超超超超喜欢你的100个女朋友》展 Love for Family后顺路走起了《Lovelive！SuperStar!!》圣地巡礼。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Lovelive%EF%BC%81SuperStar!!/">#Lovelive！SuperStar!!</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bae7a0cbfca77fbc869e0f/">表参道</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bae6d5cbfca77fbc869c53/">原宿</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/g0xaa2j6/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/66698baf0f022da1a81b8a6b.webp" alt="image-8qmsf0fy" loading="lazy" width="1000" height="477">
+        </div>
+        <div class="blog-card-title">走访繁荣商业区的边边角角《Lovelive！SuperStar!!》圣地巡礼之原宿表参道</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -100,7 +108,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

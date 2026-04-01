@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#electron<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/197/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/197/">解决electron-vue中无法Element的Tooltip组件</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/197/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2018-10-27T08:09:15.000Z">2018-10-27 17:09</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/JavaScript_jQuery/">JavaScript</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/197/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201708/262b1503221274.jpg" alt="vue.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">打开文件：electron-vue/webpack.renderer.config.js 在大约21行左右找到 let whiteListedModules 将element-ui添加进去，最终如下所示。 let whiteListedModules = ['vue', 'element-ui'] 最后重启下项目就好了。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Vue.js/">#Vue.js</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/electron/">#electron</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/197/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201708/262b1503221274.jpg" alt="vue.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">解决electron-vue中无法Element的Tooltip组件</div>
+      </a>
     </article>
       </div>
     </div>
@@ -67,7 +71,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

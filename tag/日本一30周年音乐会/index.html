@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#日本一30周年音乐会<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/j6u2eepg/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/j6u2eepg/">再现经典曲目——日本一30周年音乐会</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/j6u2eepg/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-06-29T10:07:29.000Z">2024-06-29 19:07</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab58/">音乐会</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/j6u2eepg/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/667ac613fa5f5ccf93e6506f.webp" alt="image-m7ihsmh9" loading="lazy" width="868" height="455"></a></div>
       <p class="post-excerpt">2024年6月23日，天气小雨转阴，今天去听日本一30周年音乐会。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E6%97%A5%E6%9C%AC%E4%B8%8030%E5%91%A8%E5%B9%B4%E9%9F%B3%E4%B9%90%E4%BC%9A/">#日本一30周年音乐会</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E4%BA%A4%E5%93%8D%E9%9F%B3%E4%B9%90%E4%BC%9A/">#交响音乐会</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bae831cbfca77fbc869f44/">银座</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/j6u2eepg/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202406/667ac613fa5f5ccf93e6506f.webp" alt="image-m7ihsmh9" loading="lazy" width="868" height="455">
+        </div>
+        <div class="blog-card-title">再现经典曲目——日本一30周年音乐会</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/d3hy8k2t/">
@@ -84,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

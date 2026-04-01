@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#Fate/kaleid-liner-魔法少女☆伊莉雅<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/sz083n06/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/sz083n06/">《魔法少女☆伊莉雅》生日联动女仆咖啡 2025</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/sz083n06/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-07-07T23:52:23.000Z">2025-07-08 08:52</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab57/">联动</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/sz083n06/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202507/686b64b48b40f986546060dc.webp" alt="新規プロジェクト (8)" loading="lazy" width="1280" height="720"></a></div>
       <p class="post-excerpt">2025年7月6日，天气晴，今天去秋叶原吃《魔法少女☆伊莉雅》生日联动女仆咖啡！</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Fate%2Fkaleid-liner-%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E2%98%86%E4%BC%8A%E8%8E%89%E9%9B%85/">#Fate/kaleid-liner-魔法少女☆伊莉雅</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%81%94%E5%8A%A8%E5%92%96%E5%95%A1/">#联动咖啡</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/CURE-MAID-CAF%C3%89/">#CURE-MAID-CAFÉ</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bad860cbfca77fbc86796d/">秋叶原</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/sz083n06/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202507/686b64b48b40f986546060dc.webp" alt="新規プロジェクト (8)" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="blog-card-title">《魔法少女☆伊莉雅》生日联动女仆咖啡 2025</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/s812de0q/">
@@ -84,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

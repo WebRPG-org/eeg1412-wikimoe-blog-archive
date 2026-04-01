@@ -47,30 +47,38 @@
       <h1 class="page-title">标签：#typecho模板<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/164/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/164/">Typecho《ISLAND》主题模板【ver0.1.3】</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/164/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2018-07-11T10:10:55.000Z">2018-07-11 19:10</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/PHP/">PHP</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/164/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201807/88b71531304049.jpg" alt="banner.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">说明： 本模板参考自《ISLAND》动画版官网并对其进行二次创作。非常适合炎炎夏日使用！ 推荐使用 Typecho 1.1 使用本模版！ 使用： 头部导航的英文需要在创建页面的时候建立一个en的字段。 含有归档页面，需要创建页面，并在自定义模版选择“归档”，内容为空。 含有分类页面，需要创建页面，并在自定义模版选择“分类”，内容为空。 含有友链页面，需要创建页面，方法如下面视频： 效果预览站： h</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho%E6%A8%A1%E6%9D%BF/">#typecho模板</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho/">#typecho</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/164/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201807/88b71531304049.jpg" alt="banner.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">Typecho《ISLAND》主题模板【ver0.1.3】</div>
+      </a>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/96/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/96/">Typecho《四女神Online》主题模板【ver1.0.2】</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/96/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2018-02-24T12:16:06.000Z">2018-02-24 21:16</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/PHP/">PHP</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/96/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201802/0cfb1519474741.jpg" alt="未标题-2.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">仿照《四女神Online》官网并进行了一些创新，写了这个Typecho的主题模板。 兼容IE9及其以上版本的浏览器。 含有归档页面，需要创建页面，并在自定义模版选择“归档”，内容为空。 含有分类页面，需要创建页面，并在自定义模版选择“分类”，内容为空。 含有友链页面，需要创建页面，方法如下面视频： 效果预览站：http://typecho.wikimoe.com/ 下载地址： GitHub下载地址</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho%E6%A8%A1%E6%9D%BF/">#typecho模板</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho/">#typecho</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/96/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201802/0cfb1519474741.jpg" alt="未标题-2.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">Typecho《四女神Online》主题模板【ver1.0.2】</div>
+      </a>
     </article>
       </div>
     </div>
@@ -80,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

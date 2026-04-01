@@ -47,17 +47,21 @@
       <h1 class="page-title">大洗町<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/246/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/246/">《少女与战车》圣地巡礼攻略与游记</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/246/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2020-04-16T11:34:34.000Z">2020-04-16 20:34</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/246/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202004/64ac1587036941.jpg" alt="未标题-1.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">视频录制于2020年1月4日，突然发现忘了给博客也传一份了！ 如果无法观看请点击&lt;这里&gt; 另外附上视频里的风景大图（点击可以看大图）</p>
       <div class="tag-list"><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baf1e6cbfca77fbc86b5f6/">大洗町</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/246/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202004/64ac1587036941.jpg" alt="未标题-1.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">《少女与战车》圣地巡礼攻略与游记</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -70,7 +74,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -47,30 +47,38 @@
       <h1 class="page-title">标签：#typecho插件<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/97/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/97/">Typecho插件版之给博客加上能陪聊的Live2d伊斯特瓦尔&amp;蕾姆【ver1.1.3】</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/97/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2018-06-03T08:38:13.000Z">2018-06-03 17:38</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/PHP/">PHP</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/97/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201806/88b71528014969.jpg" alt="banner.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">在之前制作的emlog版：emlog插件版之给博客加上能陪聊的Live2d版伊斯特瓦尔的基础上移植的Typecho版。 2018.6.3整合了雷姆模型，可以在后台设置启用哪套模型。 体验预览：http://typecho.wikimoe.com/ 目前的功能有： 1.可设置五篇要说的话。 2.基于图灵机器人的聊天功能。 3.能够随意移动并记录位置（关闭浏览器后失效）。 4.能够随意唤醒或者关闭并记</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho%E6%8F%92%E4%BB%B6/">#typecho插件</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho/">#typecho</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/Live2d/">#Live2d</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/97/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201806/88b71528014969.jpg" alt="banner.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">Typecho插件版之给博客加上能陪聊的Live2d伊斯特瓦尔&amp;蕾姆【ver1.1.3】</div>
+      </a>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/136/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/136/">Typecho 追番统计插件发布</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/136/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2018-04-23T13:58:55.000Z">2018-04-23 22:58</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/PHP/">PHP</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/136/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201804/64ac1524491963.jpg" alt="未标题-1.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">插件简介 本插件为通过Bangumi的API来获取追番信息，所以实现必须要在网站上注册一个账号并添加追番的动画！！！ 获取追番信息内容的部分是参照了梓喵出没大佬的Bangumi的几个API及使用PHP调用的简单测试。 插件下载 GitHub：点击进入 码云：点击进入 使用方法 0.克隆或者下载插件，记得把文件夹的名字改成【WikimoeBangumi】并上传到服务器。 1.安装完插件后在后台启动，</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho%E6%8F%92%E4%BB%B6/">#typecho插件</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/typecho/">#typecho</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/136/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201804/64ac1524491963.jpg" alt="未标题-1.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">Typecho 追番统计插件发布</div>
+      </a>
     </article>
       </div>
     </div>
@@ -80,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -84,19 +84,23 @@
       </div>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/ewlukitb/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/ewlukitb/">探访《蜡笔小新》老家——春日部游记</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/ewlukitb/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-04-29T04:35:17.000Z">2024-04-29 13:35</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/ewlukitb/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202404/662f1433e9665ac2aba45599.webp" alt="2191305_202104220915839001619088897e" loading="lazy" width="1200" height="675"></a></div>
       <p class="post-excerpt">2024年4月28日，天气晴，今天去探访《蜡笔小新》的老家——春日部。
 《蜡笔小新》可能是很多大佬的童年回忆，那么《蜡笔小新》实际的取景地是哪里呢？根据资料，就是位于日本埼玉县春日部。
 这次就趁着春日部一年一度的紫藤节，特地探访了《蜡笔小新》的老家——春日部。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%9C%A1%E7%AC%94%E5%B0%8F%E6%96%B0/">#蜡笔小新</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baf02bcbfca77fbc86b210/">春日部市</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/ewlukitb/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202404/662f1433e9665ac2aba45599.webp" alt="2191305_202104220915839001619088897e" loading="lazy" width="1200" height="675">
+        </div>
+        <div class="blog-card-title">探访《蜡笔小新》老家——春日部游记</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -109,7 +113,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -302,7 +302,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -395,8 +412,11 @@
           if (!navigator.clipboard) return;
           navigator.clipboard.writeText(block.textContent).then(function() {
             btn.classList.add('copied');
+            showToast('复制成功', 'success');
             setTimeout(function() { btn.classList.remove('copied'); }, 2000);
-          }).catch(function() {});
+          }).catch(function() {
+            showToast('复制失败', 'error');
+          });
         });
       })(copyBtn, codeBlock);
       var langSpan = document.createElement('span');

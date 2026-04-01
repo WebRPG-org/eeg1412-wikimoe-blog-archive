@@ -47,17 +47,21 @@
       <h1 class="page-title">川越市<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/274/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/274/">川越赏樱散步游记</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/274/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2023-04-03T04:01:02.000Z">2023-04-03 13:01</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/274/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202304/4b1c1680484237.jpg" alt="cover.jpg" loading="lazy" width="672" height="324"></a></div>
       <p class="post-excerpt">川越市是日本埼玉县的一个历史悠久的城市，以其美丽的樱花和独特的文化遗产而闻名。每年春天，游客们从世界各地来到这里，欣赏美丽的樱花，结缘新朋友，留下难忘的回忆。 赏樱是川越市最为著名的活动之一。春天来临时，城市中的樱花树一片粉色，整个城市都充满了浪漫和温馨的气息。每年春天，数百万游客慕名而来，一起欣赏樱花，感受春天的美好。在这里，你不仅可以欣赏到各种品种的樱花，还可以品尝到当地的美食，体验传统的文化</p>
       <div class="tag-list"><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baf1a2cbfca77fbc86b548/">川越市</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/274/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202304/4b1c1680484237.jpg" alt="cover.jpg" loading="lazy" width="672" height="324">
+        </div>
+        <div class="blog-card-title">川越赏樱散步游记</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -70,7 +74,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

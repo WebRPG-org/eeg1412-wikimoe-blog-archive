@@ -80,17 +80,21 @@
       </div>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t12v6gmm/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/t12v6gmm/">人吉圣地巡礼之出发篇</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t12v6gmm/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-08-16T08:20:39.789Z">2025-08-16 17:20</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/t12v6gmm/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202508/68a03fc64854a77883161358.webp" alt="image-aq056cw8" loading="lazy" width="1067" height="600"></a></div>
       <p class="post-excerpt">考虑到人吉的移动方式较为特别，所以决定单独出一篇博文先介绍一下，当作接下来的圣地巡礼的先导博文。顺带记录一下此次圣地巡礼中与交通相关的艰难险阻。</p>
       <div class="tag-list"><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68bada11cbfca77fbc867b55/">人吉市</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/t12v6gmm/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202508/68a03fc64854a77883161358.webp" alt="image-aq056cw8" loading="lazy" width="1067" height="600">
+        </div>
+        <div class="blog-card-title">人吉圣地巡礼之出发篇</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t11cubd7/">
@@ -302,17 +306,21 @@
       </div>
     </article>
 
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t0emx0ir/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/t0emx0ir/">充满整活与仪式感的联动咖啡：葬送的芙莉莲咖啡馆～花园～</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t0emx0ir/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2025-08-03T23:54:24.000Z">2025-08-04 08:54</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab57/">联动</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/t0emx0ir/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202507/687f2159d47aa3feeaedd6fd.webp" alt="image-xavbgrj2" loading="lazy" width="1280" height="720"></a></div>
       <p class="post-excerpt">2025年8月2日，天气晴，今天去位于晴空塔下的BOX cafe&amp;space吃葬送的芙莉莲咖啡馆～花园～</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%8E%B2/">#葬送的芙莉莲</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E8%81%94%E5%8A%A8%E5%92%96%E5%95%A1/">#联动咖啡</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baf0f8cbfca77fbc86b399/">押上</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/t0emx0ir/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202507/687f2159d47aa3feeaedd6fd.webp" alt="image-xavbgrj2" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="blog-card-title">充满整活与仪式感的联动咖啡：葬送的芙莉莲咖啡馆～花园～</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/t0eqmndn/">
@@ -401,7 +409,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

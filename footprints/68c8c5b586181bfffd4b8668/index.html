@@ -47,17 +47,21 @@
       <h1 class="page-title">八景岛海洋乐园<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/4yuu6540/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/4yuu6540/">游玩了《孤独摇滚》×横滨·八景岛海洋乐园</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/4yuu6540/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-03-31T06:28:00.679Z">2024-03-31 15:28</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab57/">联动</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/4yuu6540/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202402/65dc7bde88ac1b2af892bc82.webp" alt="image" loading="lazy" width="1200" height="848"></a></div>
       <p class="post-excerpt">在结束了《孤独摇滚》的圣地巡礼之后，终于要开始本次活动的正片——《孤独摇滚》×横滨·八景岛水上乐园。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A/">#孤独摇滚</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68c8c5b586181bfffd4b8668/">八景岛海洋乐园</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/4yuu6540/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202402/65dc7bde88ac1b2af892bc82.webp" alt="image" loading="lazy" width="1200" height="848">
+        </div>
+        <div class="blog-card-title">游玩了《孤独摇滚》×横滨·八景岛海洋乐园</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -70,7 +74,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

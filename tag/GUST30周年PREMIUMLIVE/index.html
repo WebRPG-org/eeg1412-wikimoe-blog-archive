@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#GUST30周年PREMIUMLIVE<small>(4 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/65a3d23a4be67d7a8bfc22fa/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/65a3d23a4be67d7a8bfc22fa/">GUST 30周年 PREMIUM LIVE 演唱会体验报告</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/65a3d23a4be67d7a8bfc22fa/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-01-14T12:23:22.691Z">2024-01-14 21:23</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab58/">音乐会</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/65a3d23a4be67d7a8bfc22fa/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202401/65a3d21f4be67d7a8bfc2285.webp" alt="cover" loading="lazy" width="1038" height="500"></a></div>
       <p class="post-excerpt">2024年1月14日，天气晴，今天要去横滨参加《GUST 30周年 PREMIUM LIVE》。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/GUST30%E5%91%A8%E5%B9%B4PREMIUMLIVE/">#GUST30周年PREMIUMLIVE</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baeabbcbfca77fbc86a591/">横滨市</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/65a3d23a4be67d7a8bfc22fa/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202401/65a3d21f4be67d7a8bfc2285.webp" alt="cover" loading="lazy" width="1038" height="500">
+        </div>
+        <div class="blog-card-title">GUST 30周年 PREMIUM LIVE 演唱会体验报告</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/65a3687a4be67d7a8bfbb019/">
@@ -118,7 +122,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

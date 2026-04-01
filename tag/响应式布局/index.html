@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#响应式布局<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/37/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/37/">【响应式布局】响应式布局基础之媒体查询</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/37/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2016-12-01T03:38:53.000Z">2016-12-01 12:38</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/CSS_HTML/">CSS/HTML</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/37/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201602/60231455544046.jpg" alt="css.jpg" loading="lazy" width="336" height="162"></a></div>
       <p class="post-excerpt">在以前的WEB概念中人们的第一反应往往是用“PC来看”，但是随着智能手机和平板的普及，用户的浏览环境逐渐倾向PC以外的终端。“响应式WEB”也因此受到了关注。 这次将简单说一下关于响应式布局中的媒体查询。 所谓的媒体查询？ 媒体查询是从CSS2时代开始，以media标签发展而来的CSS3新元素。 类似下面的代码应该是大家都看过的。 &lt;link rel=&quot;stylesheet&quot; href=&quot;css/</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/">#响应式布局</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/37/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/201602/60231455544046.jpg" alt="css.jpg" loading="lazy" width="336" height="162">
+        </div>
+        <div class="blog-card-title">【响应式布局】响应式布局基础之媒体查询</div>
+      </a>
     </article>
       </div>
     </div>
@@ -67,7 +71,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -47,17 +47,21 @@
       <h1 class="page-title">下北泽<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/318/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/318/">《孤独摇滚》圣地巡礼——下北泽&amp;下北泽咖喱节2023</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/318/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2023-10-14T11:59:15.000Z">2023-10-14 20:59</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/318/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202310/4a7a1697284818.jpg" alt="未命名.jpg" loading="lazy" width="672" height="324"></a></div>
       <p class="post-excerpt">2023年10月14日，天气多云，今天的第二站是下北泽。 一直想去《孤独摇滚》的圣地巡礼，结果拖延症一拖再拖拖了一年终于趁着这次咖喱节去了下北泽进行了圣地巡礼。 虽然这次咖喱节画着这么大一个孤独摇滚的立绘，其实和孤独摇滚相关的活动也就吃咖喱盖章，盖满9个送拨片，盖满22个送T恤，这哪能难倒广大《孤独摇滚》的忠实粉丝，活动开始第5天就都送完了。然后在上一篇的无线电会馆的二手店里拨片卖1100日元。 </p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A/">#孤独摇滚</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baf10ecbfca77fbc86b3ba/">下北泽</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/318/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202310/4a7a1697284818.jpg" alt="未命名.jpg" loading="lazy" width="672" height="324">
+        </div>
+        <div class="blog-card-title">《孤独摇滚》圣地巡礼——下北泽&amp;下北泽咖喱节2023</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -70,7 +74,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

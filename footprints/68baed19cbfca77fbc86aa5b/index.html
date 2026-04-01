@@ -47,18 +47,22 @@
       <h1 class="page-title">西伊豆町<small>(1 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/yh66rmsv/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/yh66rmsv/">游览西伊豆的奇景——《摇曳露营△》圣地巡礼之西伊豆堂岛与黄金崎公园</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/yh66rmsv/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-10-17T02:47:15.946Z">2024-10-17 11:47</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/yh66rmsv/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202410/671085c11d9b1723abe856c6.webp" alt="image-4h73c5by" loading="lazy" width="1000" height="600"></a></div>
       <p class="post-excerpt">2024年10月14日中午，在结束了上午下田市的行程，驾车约1小时，我们来到了西伊豆。
 下午准备去西伊豆的堂岛与黄金崎公园。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E6%91%87%E6%9B%B3%E9%9C%B2%E8%90%A5%E2%96%B3/">#摇曳露营△</a><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E6%91%87%E6%9B%B3%E9%9C%B2%E8%90%A5%E2%96%B3%E5%9C%A3%E5%9C%B0%E5%B7%A1%E7%A4%BC/">#摇曳露营△圣地巡礼</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baed19cbfca77fbc86aa5b/">西伊豆町</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/yh66rmsv/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202410/671085c11d9b1723abe856c6.webp" alt="image-4h73c5by" loading="lazy" width="1000" height="600">
+        </div>
+        <div class="blog-card-title">游览西伊豆的奇景——《摇曳露营△》圣地巡礼之西伊豆堂岛与黄金崎公园</div>
+      </a>
     </article>
       </div>
       <div class="post-footer">
@@ -71,7 +75,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {

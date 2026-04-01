@@ -47,17 +47,21 @@
       <h1 class="page-title">标签：#女神异闻录5<small>(2 篇)</small></h1>
       <div class="post-list">
         
-    <article class="post-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/bvgfdrlo/">
-      <h2><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/bvgfdrlo/">《女神异闻录5》圣地巡礼——三轩茶屋</a></h2>
+    <article class="post-card blog-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/bvgfdrlo/">
       <div class="post-meta">
         <span class="post-type-badge blog">博文</span>
         <span class="post-author">广树</span>
         <time class="post-date" datetime="2024-08-11T08:51:01.000Z">2024-08-11 17:51</time>
         <a class="post-category" href="https://eeg1412.github.io/wikimoe-blog-archive/category/659a04755232280b2e72ab54/">圣地巡礼</a>
       </div>
-      <div class="post-cover"><a href="https://eeg1412.github.io/wikimoe-blog-archive/post/bvgfdrlo/"><img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202408/66b753244c72ed1cc40c7de5.webp" alt="image-2rve5dwa" loading="lazy" width="1000" height="563"></a></div>
       <p class="post-excerpt">2024年8月10日，我在三轩茶屋享用了《圣兽之王》联动咖啡后，还顺道探访了这里的《女神异闻录5》圣地。</p>
       <div class="tag-list"><a class="tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/tag/%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%955/">#女神异闻录5</a><a class="mappoint-tag-item" href="https://eeg1412.github.io/wikimoe-blog-archive/footprints/68baefd0cbfca77fbc86b125/">三轩茶屋</a></div>
+      <a class="blog-card-panel" href="https://eeg1412.github.io/wikimoe-blog-archive/post/bvgfdrlo/">
+        <div class="blog-card-cover">
+          <img src="https://filedn.eu/lgBqVslpFWCkYuND5NfXwQB/wikimoe/content/uploadfile/202408/66b753244c72ed1cc40c7de5.webp" alt="image-2rve5dwa" loading="lazy" width="1000" height="563">
+        </div>
+        <div class="blog-card-title">《女神异闻录5》圣地巡礼——三轩茶屋</div>
+      </a>
     </article>
 
     <article class="post-card tweet-card" data-href="https://eeg1412.github.io/wikimoe-blog-archive/post/1mrfpjf3/">
@@ -84,7 +88,24 @@
       <p>&copy; <span id="copyright-year"></span> 维基萌博客档案馆</p>
     </div>
   </footer>
+  <div id="toast-container" class="toast-container"></div>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script>
+  function showToast(message, type) {
+    var container = document.getElementById('toast-container');
+    if (!container) return;
+    var toast = document.createElement('div');
+    toast.className = 'toast-item' + (type === 'success' ? ' toast-success' : type === 'error' ? ' toast-error' : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('toast-show'); });
+    setTimeout(function() {
+      toast.classList.remove('toast-show');
+      toast.classList.add('toast-hide');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2000);
+  }
+  </script>
   <script src="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
