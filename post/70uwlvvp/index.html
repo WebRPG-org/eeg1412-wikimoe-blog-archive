@@ -10,6 +10,7 @@
   <link rel="canonical" href="https://eeg1412.github.io/wikimoe-blog-archive/post/70uwlvvp/">
   <link rel="stylesheet" href="https://eeg1412.github.io/wikimoe-blog-archive/css/style.css">
   <link rel="stylesheet" href="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.css">
+  <link rel="stylesheet" href="https://eeg1412.github.io/wikimoe-blog-archive/highlight/style.css">
   <link rel="alternate" type="application/rss+xml" title="维基萌博客档案馆" href="https://eeg1412.github.io/wikimoe-blog-archive/feed.xml">
   <meta property="og:title" content="左侧是爆莉萌天使变身前，右侧是爆莉萌天使变身后。👏 - 维基萌博客档案馆">
   <meta property="og:description" content="左侧是爆莉萌天使变身前，右侧是爆莉萌天使变身后。👏">
@@ -118,6 +119,60 @@
         if (e.target.closest('a')) return;
         window.location.href = card.dataset.href;
       });
+    });
+  });
+  </script>
+  <script src="https://eeg1412.github.io/wikimoe-blog-archive/highlight/highlight.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var richContent = document.querySelector('.rich-content');
+    if (!richContent || typeof hljs === 'undefined') return;
+    var preList = richContent.querySelectorAll('pre');
+    preList.forEach(function(pre) {
+      var codeBlock = pre.querySelector('code');
+      if (!codeBlock) {
+        var code = document.createElement('code');
+        code.textContent = pre.textContent;
+        code.className = pre.className;
+        pre.innerHTML = '';
+        pre.appendChild(code);
+        pre.removeAttribute('class');
+        codeBlock = code;
+      }
+      var hasLanguageClass = /language-/.test(codeBlock.className);
+      codeBlock.textContent = codeBlock.textContent.trim();
+      hljs.highlightElement(codeBlock);
+      var result = codeBlock.result;
+      var language = 'code';
+      if (hasLanguageClass) {
+        language = (result && result.language) || 'code';
+      }
+      var lines = (codeBlock.textContent + '\n').split('\n').length - 1;
+      codeBlock.setAttribute(
+        'data-lines',
+        Array.from({length: lines}, function(_, i) { return i + 1; }).join('\n')
+      );
+      var div = document.createElement('div');
+      div.className = 'code-header';
+      var copyBtn = document.createElement('button');
+      copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"/></svg>';
+      copyBtn.className = 'code-copy-btn';
+      copyBtn.title = '复制代码';
+      (function(btn, block) {
+        btn.addEventListener('click', function() {
+          if (!navigator.clipboard) return;
+          navigator.clipboard.writeText(block.textContent).then(function() {
+            btn.classList.add('copied');
+            setTimeout(function() { btn.classList.remove('copied'); }, 2000);
+          }).catch(function() {});
+        });
+      })(copyBtn, codeBlock);
+      var langSpan = document.createElement('span');
+      langSpan.className = 'code-language';
+      langSpan.textContent = language;
+      div.appendChild(langSpan);
+      div.appendChild(copyBtn);
+      pre.prepend(div);
     });
   });
   </script>

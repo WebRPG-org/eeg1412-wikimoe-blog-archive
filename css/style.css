@@ -631,6 +631,7 @@ main {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   line-height: 1.6;
+  position: relative;
 }
 
 .rich-content code {
@@ -644,6 +645,100 @@ main {
 .rich-content pre code {
   background: none;
   padding: 0;
+}
+
+/* ========== Code Highlight (highlight.js) ========== */
+.rich-content pre code.hljs {
+  position: relative;
+  padding-left: 3.5em;
+  padding-top: 2.5rem;
+  padding-bottom: 0.75em;
+  padding-right: 1em;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.rich-content pre code.hljs::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.rich-content pre code.hljs::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: transparent;
+}
+.rich-content pre code.hljs:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+/* 行号 */
+.rich-content pre code.hljs::before {
+  content: attr(data-lines);
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 3em;
+  padding: 0 0.5em;
+  overflow: hidden;
+  letter-spacing: -1px;
+  text-align: right;
+  color: rgba(128, 128, 128, 0.6);
+  border-right: 1px solid rgba(128, 128, 128, 0.3);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 代码块顶部头部栏 */
+.code-header {
+  color: #f3f4f6;
+  font-size: 0.875rem;
+  background: #1e1e2e;
+  padding: 0 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  border-radius: var(--radius) var(--radius) 0 0;
+  box-sizing: border-box;
+}
+
+.code-language {
+  margin-left: 0.25rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.code-copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-right: 0.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s, background 0.2s;
+}
+.code-copy-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+.code-copy-btn.copied {
+  opacity: 1;
+}
+.code-copy-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: #f3f4f6;
+}
+.code-copy-btn.copied svg {
+  fill: #34d399;
 }
 
 .rich-content a {

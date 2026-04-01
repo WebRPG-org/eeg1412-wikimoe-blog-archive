@@ -10,6 +10,7 @@
   <link rel="canonical" href="https://eeg1412.github.io/wikimoe-blog-archive/post/151/">
   <link rel="stylesheet" href="https://eeg1412.github.io/wikimoe-blog-archive/css/style.css">
   <link rel="stylesheet" href="https://eeg1412.github.io/wikimoe-blog-archive/glightbox/glightbox.min.css">
+  <link rel="stylesheet" href="https://eeg1412.github.io/wikimoe-blog-archive/highlight/style.css">
   <link rel="alternate" type="application/rss+xml" title="维基萌博客档案馆" href="https://eeg1412.github.io/wikimoe-blog-archive/feed.xml">
   <meta property="og:title" content="记第一次拍牙片（智齿） - 维基萌博客档案馆">
   <meta property="og:description" content="因为最近感觉牙槽最深处长了一颗智齿，而且很歪，于是今天就去拍了张牙片，牙片如下： 可以看到图像左上角两颗牙呈现了V字形。 智齿的体位大致可以分为如下几种： 牙片左上角的智齿应该就是图片2的情况了。 这种智齿如果冠周软组织没有发炎和疼痛，智齿没有龋坏的话可以保留。 然后可以看到牙片右上角其实也长了一颗智齿，这种智齿则属于图片3的情况。 这种智齿如果下排也长了对应的智齿，而且能够咬合的话也是可以不用处">
@@ -150,6 +151,60 @@
         if (e.target.closest('a')) return;
         window.location.href = card.dataset.href;
       });
+    });
+  });
+  </script>
+  <script src="https://eeg1412.github.io/wikimoe-blog-archive/highlight/highlight.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var richContent = document.querySelector('.rich-content');
+    if (!richContent || typeof hljs === 'undefined') return;
+    var preList = richContent.querySelectorAll('pre');
+    preList.forEach(function(pre) {
+      var codeBlock = pre.querySelector('code');
+      if (!codeBlock) {
+        var code = document.createElement('code');
+        code.textContent = pre.textContent;
+        code.className = pre.className;
+        pre.innerHTML = '';
+        pre.appendChild(code);
+        pre.removeAttribute('class');
+        codeBlock = code;
+      }
+      var hasLanguageClass = /language-/.test(codeBlock.className);
+      codeBlock.textContent = codeBlock.textContent.trim();
+      hljs.highlightElement(codeBlock);
+      var result = codeBlock.result;
+      var language = 'code';
+      if (hasLanguageClass) {
+        language = (result && result.language) || 'code';
+      }
+      var lines = (codeBlock.textContent + '\n').split('\n').length - 1;
+      codeBlock.setAttribute(
+        'data-lines',
+        Array.from({length: lines}, function(_, i) { return i + 1; }).join('\n')
+      );
+      var div = document.createElement('div');
+      div.className = 'code-header';
+      var copyBtn = document.createElement('button');
+      copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"/></svg>';
+      copyBtn.className = 'code-copy-btn';
+      copyBtn.title = '复制代码';
+      (function(btn, block) {
+        btn.addEventListener('click', function() {
+          if (!navigator.clipboard) return;
+          navigator.clipboard.writeText(block.textContent).then(function() {
+            btn.classList.add('copied');
+            setTimeout(function() { btn.classList.remove('copied'); }, 2000);
+          }).catch(function() {});
+        });
+      })(copyBtn, codeBlock);
+      var langSpan = document.createElement('span');
+      langSpan.className = 'code-language';
+      langSpan.textContent = language;
+      div.appendChild(langSpan);
+      div.appendChild(copyBtn);
+      pre.prepend(div);
     });
   });
   </script>
