@@ -539,6 +539,22 @@ main {
   border-width: 12px 0 12px 22px;
 }
 
+/* ========== Media Description Tag ========== */
+.media-desc-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  padding: 3px 7px;
+  border-bottom-right-radius: 4px;
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+}
+
 /* ========== Tweet Detail ========== */
 .tweet-detail-text {
   font-size: 1rem;
