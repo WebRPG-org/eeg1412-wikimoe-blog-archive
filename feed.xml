@@ -7,6 +7,36 @@
   <atom:link href="https://eeg1412.github.io/wikimoe-blog-archive/feed.xml" rel="self" type="application/rss+xml"/>
   
     <item>
+      <title>AI趣事分享。
+最近让AI写代码的时候，由于接口文档遗漏了一个字段。但是功能上需要这条数据。又因为我</title>
+      <link>https://eeg1412.github.io/wikimoe-blog-archive/post/t-tfzbepnl/</link>
+      <guid>https://eeg1412.github.io/wikimoe-blog-archive/post/t-tfzbepnl/</guid>
+      <description>AI趣事分享。
+最近让AI写代码的时候，由于接口文档遗漏了一个字段。但是功能上需要这条数据。又因为我在提示词中禁止兜底。
+于是AI在一个不起眼的角落里写了一个猜字段工厂函数。根据命名习惯，排列组合几十种可能的字段名。硬是猜对了，能正常运行。
+真的服了😅</description>
+      <pubDate>Tue, 02 Jun 2026 00:44:49 GMT</pubDate>
+    </item>
+    <item>
+      <title>不知道为什么《告别回忆9》的Steam版的画面锯齿感严重，像是用了最近邻插值算法缩放一样。这个问题自</title>
+      <link>https://eeg1412.github.io/wikimoe-blog-archive/post/t-tfxggu4h/</link>
+      <guid>https://eeg1412.github.io/wikimoe-blog-archive/post/t-tfxggu4h/</guid>
+      <description>不知道为什么《告别回忆9》的Steam版的画面锯齿感严重，像是用了最近邻插值算法缩放一样。这个问题自发售以来一直没人管。但是串流到其它设备就莫名其妙好了？什么原理？</description>
+      <pubDate>Mon, 01 Jun 2026 00:38:54 GMT</pubDate>
+    </item>
+    <item>
+      <title>今天去听了《命运石之门》的交响音乐会。
+整场音乐会涵盖了《命运石之门》系列游戏的经典曲目。
+所有曲目</title>
+      <link>https://eeg1412.github.io/wikimoe-blog-archive/post/t-tfwe278f/</link>
+      <guid>https://eeg1412.github.io/wikimoe-blog-archive/post/t-tfwe278f/</guid>
+      <description>今天去听了《命运石之门》的交响音乐会。
+整场音乐会涵盖了《命运石之门》系列游戏的经典曲目。
+所有曲目中，我认为《命运石之门》的 GATE OF STEINER -Main theme-  和《命运石之门 0》的 Messenger -main theme- ，也就是两部游戏的游戏菜单曲目的交响乐版最为好听。
+加倍演奏出了原曲的神秘感和激昂感演绎。</description>
+      <pubDate>Sun, 31 May 2026 10:49:20 GMT</pubDate>
+    </item>
+    <item>
       <title>听闻最近镰仓的夜光藻爆发，于是下班火速前往。
 但是很可惜今天的夜光藻并不是很亮。
 下次再来挑战。</title>
@@ -178,27 +208,6 @@ https://eeg1412.github.io/wikimoe-blog-archive/zh-HK
 虽然这套流程也可以用AI完成，但是考虑到不稳定性，还是需要我来人工质检一遍。
 封面图的文字问题，这个其实接入OpenAI的 API 可以解决，但是现状还需要评估一下。</description>
       <pubDate>Fri, 01 May 2026 07:09:57 GMT</pubDate>
-    </item>
-    <item>
-      <title>惊了！ChatGPT images 2.0居然可以生成全景图片！</title>
-      <link>https://eeg1412.github.io/wikimoe-blog-archive/post/t-te7dnvga/</link>
-      <guid>https://eeg1412.github.io/wikimoe-blog-archive/post/t-te7dnvga/</guid>
-      <description>惊了！ChatGPT images 2.0居然可以生成全景图片！</description>
-      <pubDate>Tue, 28 Apr 2026 12:07:07 GMT</pubDate>
-    </item>
-    <item>
-      <title>踏入迷途橘 《Summer Pockets》 圣地巡礼之国营常陆海滨公园</title>
-      <link>https://eeg1412.github.io/wikimoe-blog-archive/post/b-te1ibpro/</link>
-      <guid>https://eeg1412.github.io/wikimoe-blog-archive/post/b-te1ibpro/</guid>
-      <description>2026年4月19日，天气晴，今天去位于茨城县常陆那珂市的国营常陆海滨公园看花，同时这里也是游戏《Summer Pockets》的迷途橘的取景地。</description>
-      <pubDate>Sun, 26 Apr 2026 23:11:25 GMT</pubDate>
-    </item>
-    <item>
-      <title>新宿电影院正在展出《吹响吧！上低音号》的展览物。</title>
-      <link>https://eeg1412.github.io/wikimoe-blog-archive/post/t-te3log06/</link>
-      <guid>https://eeg1412.github.io/wikimoe-blog-archive/post/t-te3log06/</guid>
-      <description>新宿电影院正在展出《吹响吧！上低音号》的展览物。</description>
-      <pubDate>Sun, 26 Apr 2026 11:09:51 GMT</pubDate>
     </item>
 </channel>
 </rss>
